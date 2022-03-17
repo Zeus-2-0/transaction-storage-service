@@ -9,7 +9,7 @@
     </parent>
     <groupId>com.brihaspathee.zeus</groupId>
     <artifactId>transaction-storage-service</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>Transaction Storage Service</name>
     <description>Service that stores the original transaction data in normalized tables</description>
     <url>http://www.brihaspathee.com</url>
