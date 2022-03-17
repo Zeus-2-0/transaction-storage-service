@@ -1,0 +1,41 @@
+2022-03-17 10:45:38.573  INFO 1714 --- [main] b.z.TransactionStorageServiceApplication : Starting TransactionStorageServiceApplication using Java 17.0.1 on Balajis-Mac-mini.local with PID 1714 (/Users/balaji/Documents/Projects/Zeus/transaction-storage-service/target/classes started by balaji in /Users/balaji/Documents/Projects/Zeus/transaction-storage-service)
+2022-03-17 10:45:38.575  INFO 1714 --- [main] b.z.TransactionStorageServiceApplication : The following 2 profiles are active: "local", "clean"
+2022-03-17 10:45:38.875  INFO 1714 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-17 10:45:38.882  INFO 1714 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-03-17 10:45:39.122  INFO 1714 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8086 (http)
+2022-03-17 10:45:39.126  INFO 1714 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-17 10:45:39.126  INFO 1714 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-17 10:45:39.163  INFO 1714 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-17 10:45:39.163  INFO 1714 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 572 ms
+2022-03-17 10:45:39.443  INFO 1714 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.0.5 by Redgate
+2022-03-17 10:45:39.444  INFO 1714 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/transactionstoragedb (MySQL 8.0)
+2022-03-17 10:45:39.493  INFO 1714 --- [main] o.f.core.internal.command.DbClean        : Successfully dropped pre-schema database level objects (execution time 00:00.001s)
+2022-03-17 10:45:39.514  INFO 1714 --- [main] o.f.core.internal.command.DbClean        : Successfully cleaned schema `transactionstoragedb` (execution time 00:00.020s)
+2022-03-17 10:45:39.517  INFO 1714 --- [main] o.f.core.internal.command.DbClean        : Successfully cleaned schema `transactionstoragedb` (execution time 00:00.003s)
+2022-03-17 10:45:39.518  INFO 1714 --- [main] o.f.core.internal.command.DbClean        : Successfully dropped post-schema database level objects (execution time 00:00.000s)
+2022-03-17 10:45:39.534  INFO 1714 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.0.5 by Redgate
+2022-03-17 10:45:39.549  INFO 1714 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.006s)
+2022-03-17 10:45:39.560  INFO 1714 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `transactionstoragedb`.`flyway_schema_history` ...
+2022-03-17 10:45:39.583  INFO 1714 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `transactionstoragedb`: << Empty Schema >>
+2022-03-17 10:45:39.586  INFO 1714 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `transactionstoragedb` to version "1 - init table creation"
+2022-03-17 10:45:39.589  WARN 1714 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'transactionstoragedb.transaction_info' (SQL State: 42S02 - Error Code: 1051)
+2022-03-17 10:45:39.601  INFO 1714 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema `transactionstoragedb`, now at version v1 (execution time 00:00.019s)
+2022-03-17 10:45:39.644  INFO 1714 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-17 10:45:39.663  INFO 1714 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-17 10:45:39.720  INFO 1714 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-17 10:45:39.757  INFO 1714 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-17 10:45:39.783  INFO 1714 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-17 10:45:39.793  INFO 1714 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-03-17 10:45:39.873  INFO 1714 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-17 10:45:39.877  INFO 1714 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-17 10:45:39.929  WARN 1714 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-17 10:45:40.357  INFO 1714 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8086 (http) with context path ''
+2022-03-17 10:45:40.362  INFO 1714 --- [main] b.z.TransactionStorageServiceApplication : Started TransactionStorageServiceApplication in 1.94 seconds (JVM running for 2.145)
+2022-03-17 10:45:40.963  INFO 1714 --- [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-17 10:45:40.963  INFO 1714 --- [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-17 10:45:40.963  INFO 1714 --- [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-03-17 10:45:41.019  INFO 1714 --- [http-nio-8086-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 18 ms
+2022-03-17 10:45:41.058  INFO 1714 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-03-17 10:45:41.065  INFO 1714 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-17 10:45:41.066  INFO 1714 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-17 10:45:41.069  INFO 1714 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
