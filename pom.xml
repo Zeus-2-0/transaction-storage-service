@@ -9,7 +9,7 @@
     </parent>
     <groupId>com.brihaspathee.zeus</groupId>
     <artifactId>transaction-storage-service</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.2</version>
     <name>Transaction Storage Service</name>
     <description>Service that stores the original transaction data in normalized tables</description>
     <url>http://www.brihaspathee.com</url>
@@ -31,7 +31,7 @@
         <!--        <developerConnection>scm:git:ssh://github.com:Zeus-2-0/reference-data-service.git</developerConnection>-->
         <developerConnection>scm:git:git@github.com:Zeus-2-0/transaction-storage-service.git</developerConnection>
         <url>scm:git:http://github.com/Zeus-2-0/transaction-storage-service</url>
-        <tag>1.0.0</tag>
+        <tag>transaction-storage-service-0.0.2</tag>
     </scm>
 
     <developers>
