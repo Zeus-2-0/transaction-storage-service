@@ -2,7 +2,7 @@ zeus-transaction-storage:
   api:
     version: 1.0.0
 server:
-  port: 8086
+  port: 8087
 spring:
   kafka:
     bootstrap-servers: localhost:9092

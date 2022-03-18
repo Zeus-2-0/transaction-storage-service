@@ -176,7 +176,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <apiDocsUrl>http://localhost:8086/v3/api-docs.yaml</apiDocsUrl>
+                    <apiDocsUrl>http://localhost:8087/v3/api-docs.yaml</apiDocsUrl>
                     <outputFileName>transaction-storage-api.yaml</outputFileName>
                     <outputDir>openapi-spec</outputDir>
                     <skip>false</skip>
