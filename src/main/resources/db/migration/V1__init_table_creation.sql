@@ -1,7 +1,19 @@
+DROP TABLE  IF EXISTS `transactionstoragedb`.`payload_tracker`;
+DROP TABLE  IF EXISTS `transactionstoragedb`.`payload_tracker_detail`;
 DROP TABLE  IF EXISTS `transactionstoragedb`.`transaction_info`;
 CREATE TABLE IF NOT EXISTS `transactionstoragedb`.`transaction_info` (
-    `transaction_info_sk` VARCHAR(36) NOT NULL,
-    `file_id` VARCHAR(100) NULL,
+    `transaction_info_sk` VARCHAR(36) NOT NULL COMMENT 'Primary key of the table',
+    `zfcn` VARCHAR(45) NOT NULL COMMENT 'The control number of the file that the transaction was received',
+    `ztcn` VARCHAR(45) NOT NULL COMMENT 'The control number of the transaction',
+    `transaction_received_date` DATETIME NOT NULL COMMENT 'The date and time when the transaction was received',
+    `trading_partner_id` VARCHAR(50) NOT NULL COMMENT 'The trading partner id associated with the transaction',
+    `marketplace_type_code` VARCHAR(50) NOT NULL COMMENT 'The marketplace type code associated with the transaction',
+    `line_of_business_type_code` VARCHAR(50) NOT NULL COMMENT 'The line of business associated with the transaction',
+    `business_unit_type_code` VARCHAR(50) NOT NULL COMMENT 'The business unit associated with the transaction',
+    `state_type_code` VARCHAR(50) NOT NULL COMMENT 'The state of the transaction',
+    `transaction_data` LONGBLOB NOT NULL COMMENT 'The transaction data stored as CLOB',
+    `created_date` DATETIME NULL COMMENT 'The date when the record was created',
+    `updated_date` DATETIME NULL COMMENT 'The date when the record was updated',
     PRIMARY KEY (`transaction_info_sk`))
     ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `transactionstoragedb`.`payload_tracker` (

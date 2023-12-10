@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 public class TransactionResource implements TransactionAPI {
+
     @Override
     public ResponseEntity<ZeusApiResponse<TransactionDto>> getTransactionById(String transactionId) {
         ZeusApiResponse<TransactionDto> apiResponse = ZeusApiResponse.<TransactionDto>builder()
