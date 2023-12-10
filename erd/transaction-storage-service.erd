@@ -1,0 +1,1 @@
+<diagram version="1" name="transaction-storage-service.erd" time="202306291417"><entities><data-source id="mysql8-189082c6942-68d3de8f645b3225"><entity id="1" name="transaction_info" fq-name="transactionstoragedb.transaction_info" order="0" color-bg="204,192,184" x="374" y="166"><path name="transactionstoragedb"/></entity></data-source></entities><relations/></diagram>
