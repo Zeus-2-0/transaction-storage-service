@@ -1,12 +1,17 @@
 package com.brihaspathee.zeus.web.resource.impl;
 
+import com.brihaspathee.zeus.constants.ApiResponseConstants;
+import com.brihaspathee.zeus.service.interfaces.DataCleanUpService;
 import com.brihaspathee.zeus.web.model.TransactionDto;
 import com.brihaspathee.zeus.web.resource.interfaces.TransactionAPI;
 import com.brihaspathee.zeus.web.response.ZeusApiResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.time.LocalDateTime;
 
 /**
  * Created in Intellij IDEA
@@ -22,6 +27,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class TransactionResource implements TransactionAPI {
 
+    /**
+     * Instance of data clean up service
+     */
+    private final DataCleanUpService cleanUpService;
+
+    /**
+     * Get transaction by transaction id
+     * @param transactionId
+     * @return
+     */
     @Override
     public ResponseEntity<ZeusApiResponse<TransactionDto>> getTransactionById(String transactionId) {
         ZeusApiResponse<TransactionDto> apiResponse = ZeusApiResponse.<TransactionDto>builder()
@@ -31,5 +46,23 @@ public class TransactionResource implements TransactionAPI {
                         .build())
                 .build();
         return ResponseEntity.ok(apiResponse);
+    }
+
+    /**
+     * Clean up the entire database
+     * @return
+     */
+    @Override
+    public ResponseEntity<ZeusApiResponse<String>> cleanUp() {
+        cleanUpService.deleteAll();
+        ZeusApiResponse<String> apiResponse = ZeusApiResponse.<String>builder()
+                .response("Request deleted successfully")
+                .statusCode(204)
+                .status(HttpStatus.NO_CONTENT)
+                .developerMessage(ApiResponseConstants.SUCCESS)
+                .message(ApiResponseConstants.SUCCESS_REASON)
+                .timestamp(LocalDateTime.now())
+                .build();
+        return new ResponseEntity<>(apiResponse, HttpStatus.NO_CONTENT);
     }
 }

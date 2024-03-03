@@ -32,6 +32,19 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ZeusApiResponse'
+  /api/v1/transaction/storage/delete:
+    delete:
+      tags:
+      - transaction-storage
+      description: Delete all data
+      operationId: Delete all data
+      responses:
+        "204":
+          description: Data deleted successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ZeusApiResponse'
 components:
   schemas:
     ZeusApiResponse:
@@ -49,6 +62,7 @@ components:
           - 100 CONTINUE
           - 101 SWITCHING_PROTOCOLS
           - 102 PROCESSING
+          - 103 EARLY_HINTS
           - 103 CHECKPOINT
           - 200 OK
           - 201 CREATED
