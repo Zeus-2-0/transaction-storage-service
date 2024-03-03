@@ -10,6 +10,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -50,4 +51,24 @@ public interface TransactionAPI {
     )
     @GetMapping("/{transactionId}")
     ResponseEntity<ZeusApiResponse<TransactionDto>> getTransactionById(@PathVariable("transactionId") String transactionId);
+
+    /**
+     * Clean up the entire db
+     * @return
+     */
+    @Operation(
+            operationId = "Delete all data",
+            method = "DELETE",
+            description = "Delete all data",
+            tags = {"transaction-storage"}
+    )
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "204",
+                    description = "Data deleted successfully",
+                    content = {
+                            @Content(mediaType = "application/json",schema = @Schema(implementation = ZeusApiResponse.class))
+                    })
+    })
+    @DeleteMapping("/delete")
+    ResponseEntity<ZeusApiResponse<String>> cleanUp();
 }
