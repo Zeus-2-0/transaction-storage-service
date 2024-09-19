@@ -4,12 +4,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.4</version>
+        <version>3.3.3</version>
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.brihaspathee.zeus</groupId>
     <artifactId>transaction-storage-service</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
     <name>Transaction Storage Service</name>
     <description>Service that stores the original transaction data in normalized tables</description>
     <url>http://www.brihaspathee.com</url>
@@ -57,7 +57,7 @@
         <dependency>
             <groupId>com.brihaspathee.zeus</groupId>
             <artifactId>zeus-library</artifactId>
-            <version>2.0.21</version>
+            <version>2.0.27</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
